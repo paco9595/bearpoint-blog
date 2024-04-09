@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <main className="flex flex-col justify-between max-w-[768px] px-20 mx-auto h-screen">
       <div>
-        {data.map(({ url, title, description, id, tag_list }) => (
+        {data?.map(({ url, title, description, id, tag_list }) => (
           <div key={id} className="my-4">
             <Link href={url} target="_blank" className="text-2xl truncate">
               {title}
