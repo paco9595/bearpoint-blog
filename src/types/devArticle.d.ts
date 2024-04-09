@@ -19,7 +19,7 @@ export interface ArticleDev {
   published_timestamp: Date;
   body_markdown: string;
   positive_reactions_count: number;
-  cover_image: null;
+  cover_image: string | null;
   tag_list: string[];
   canonical_url: string;
   reading_time_minutes: number;
