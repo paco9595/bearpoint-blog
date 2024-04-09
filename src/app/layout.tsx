@@ -5,7 +5,6 @@ import Header from "@/components/header";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, 'bg-background text-foreground')}>
+      <body className={cn('w-screen p-3 pl-4')}>
       <ThemeProvider
             attribute="class"
             defaultTheme="system"

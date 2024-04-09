@@ -5,7 +5,7 @@ import ToggleTheme from "./toggleTheme";
 export default function Header() {
   return (
     <header>
-      <div className="p-[10px] pl-5 flex justify-between items-center h-20 max-w-5xl mx-auto">
+      <div className="flex justify-between items-center h-20 max-w-5xl mx-auto">
         <div>
           <Link href="/" className="flex items-center">
               <Image
