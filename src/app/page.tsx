@@ -1,9 +1,5 @@
 import ArticleList from "@/components/articuleList";
 import Aside from "@/components/sidebar";
-import { ArticleDev, FetchArticleResponse } from "@/types/devArticle";
-import { ErrorMessage } from "@/types/errorFetch";
-import Image from "next/image";
-import Link from "next/link";
 
 export default async function Home() {
   const data = await fetch(

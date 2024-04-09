@@ -1,7 +1,9 @@
 'use client'
 import { ArticleDev } from "@/types/devArticle";
+import { ImageError } from "next/dist/server/image-optimizer";
 import Image from "next/image";
 import Link from "next/link";
+import { ReactEventHandler } from "react";
 
 export default function ArticleList({ list }: { list: ArticleDev[] }) {
   return (
@@ -21,9 +23,10 @@ function ArticleItem({
     <div className="my-4 font-normal grid grid-cols-[50px_1fr]">
       <Image
         src={`/icons/${tag_list[0]}.svg`}
-        onError={(e)=> {
-            e.target.src= '/icons/next.svg'
-            e.onerror = null
+        onError={(e: React.SyntheticEvent<HTMLImageElement, Event>)=> {
+            const target = e.target as HTMLImageElement;
+            target.src= '/icons/next.svg'
+            target.onerror = null
         }}
         alt="profile image"
         className="h-auto w-full my-auto"
