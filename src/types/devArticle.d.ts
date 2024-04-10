@@ -1,7 +1,11 @@
 import { ErrorMessage } from '@/types/errorFetch';
-import { ErrorMessage } from "./errorFetch.d";
+import { ErrorMessage } from "./errorFetch";
 
-export type FetchArticleResponse<T, ErrorMessage> = T[] | ErrorMessage;
+export type FetchArticleResponse = {
+  data?: ArticleDev[],
+  error?: string,
+  status? : number
+}
 
 export interface ArticleDev {
   type_of: string;
