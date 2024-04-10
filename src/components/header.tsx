@@ -5,7 +5,7 @@ import ToggleTheme from "./toggleTheme";
 export default function Header() {
   return (
     <header>
-      <div className="flex justify-between items-center h-20 max-w-5xl mx-auto">
+      <div className="flex justify-between items-center h-20 max-w-screen-xl mx-auto">
         <div>
           <Link href="/" className="flex items-center">
               <Image
@@ -14,7 +14,7 @@ export default function Header() {
                 width={40}
                 height={40}
               />
-              <span className="pl-[10px]">Bearpoint</span>
+              <span className="pl-[10px] font-bold text-2xl">Bearpoint</span>
           </Link>
         </div>
         <div>

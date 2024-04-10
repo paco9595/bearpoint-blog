@@ -7,7 +7,7 @@ export default async function Aside() {
   }).then((res) => res.json());
 
   return (
-    <aside className="hidden md:block">
+    <aside className="hidden lg:block">
       <div className="flex mb-2">
         <hr className="flex-1 my-auto mr-3 h-px bg-gray-300 border-0"></hr>
         <h4 className="text-xs uppercase">Hello</h4>

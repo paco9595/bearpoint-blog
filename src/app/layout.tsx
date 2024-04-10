@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
-import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme";
 
 
@@ -18,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn('w-screen p-3 pl-4')}>
+      <body className={'max-w-[1200px] mx-auto px-10'}>
       <ThemeProvider
             attribute="class"
             defaultTheme="system"
