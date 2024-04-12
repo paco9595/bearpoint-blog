@@ -1,11 +1,15 @@
+import withMDX from '@next/mdx'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
     remotePatterns: [
       {
         hostname: "media.dev.to",
       },
       { hostname: "res.cloudinary.com" },
+      { hostname: "miro.medium.com" },
     ],
   },
   async redirects() {
@@ -19,4 +23,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withMDX()(nextConfig);

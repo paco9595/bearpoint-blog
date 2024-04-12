@@ -11,14 +11,11 @@ export default function ArticleList({ list = [] }: { list?: ArticleDev[] }) {
       {list.map((article) => (
         <ArticleItem key={article.id} article={article} />
       ))}
-      {list.map((article) => (
-          <ArticleItem key={article.id + 1} article={article} />
-      ))}
     </div>
   );
 }
 function ArticleItem({
-  article: { url, tag_list, title, published_at },
+  article: {  tag_list, title, published_at, id},
 }: {
   article: ArticleDev;
 }) {
@@ -39,8 +36,7 @@ function ArticleItem({
       />
       <div>
         <Link
-          href={url}
-          target="_blank"
+          href={`/article/${id}`}
           className="text-wrap font-semibold text-lg"
         >
           {title}

@@ -1,0 +1,7 @@
+pre:has(code) {
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #282c34;
+  color: white;
+}
