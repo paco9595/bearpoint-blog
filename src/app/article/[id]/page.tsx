@@ -4,14 +4,17 @@ import matter from "gray-matter";
 import "@/styles/markdown.css";
 import Image from "next/image";
 import { formatDate } from "@/utils/formatDate";
+import { headers } from "next/headers";
 
 export default async function Article({
   params: { id },
 }: {
   params: { id: string };
 }) {
+  const headersList = headers();
+  const hostname = headersList.get('x-forwarded-host');
   const { body_markdown, reading_time_minutes, published_at }: ArticleDev = await fetch(
-    `${process.env.BASE_URL}/api/article/${id}`
+    `http://${hostname}/api/article/${id}`
   ).then((res) => res.json());
   console.log(typeof body_markdown)
   const { data:{title}, content } = matter(body_markdown);

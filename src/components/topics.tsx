@@ -1,7 +1,10 @@
 import { FetchArticleResponse } from "@/types/devArticle";
+import { headers } from "next/headers";
 
 export default async function Topics() {
-  const {status, data}: FetchArticleResponse= await fetch(`${process.env.BASE_URL}/api/tag`).then(res=>res.json())
+  const headersList = headers();
+  const hostname = headersList.get('x-forwarded-host');
+  const {status, data}: FetchArticleResponse= await fetch(`http://${hostname}/api/tag`).then(res=>res.json())
   if (status) {
     return <div>Error Pulling Articules</div>;
   }
