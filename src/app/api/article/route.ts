@@ -2,6 +2,8 @@ import { type FetchArticleResponse } from "@/types/devArticle";
 import { NextRequest, NextResponse } from "next/server";
 import { getArticle } from "../getArticle";
 
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: NextRequest) {
   try {
     const page = Number(request.nextUrl.searchParams.get("page")) || 1;
