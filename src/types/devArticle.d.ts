@@ -22,6 +22,7 @@ export interface ArticleDev {
   page_views_count: number;
   published_timestamp: Date;
   body_markdown: string;
+  body_html: string;
   positive_reactions_count: number;
   cover_image: string | null;
   tag_list: string[];

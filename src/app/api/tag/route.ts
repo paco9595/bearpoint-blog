@@ -3,7 +3,7 @@ import { getArticle } from "../getArticle";
 
 
 export async function GET(_request: Request){
-    const data = await getArticle()
+    const data = await getArticle(1,1000)
     if(!Array.isArray(data)){
         return NextResponse.json(data)
     }
